@@ -10,7 +10,7 @@ const EnrollmentForm = ()=>{
 
     const handleSubmit = (e) => {
         setWelcomeMessage(`환영합니다. ${firstName} ${lastName} 님!!` );
-        e.preventDefault(); //submit 기능 중지
+        e.preventDefault(); //submit 기능 중지 - 전송 중지
 
     };
 
