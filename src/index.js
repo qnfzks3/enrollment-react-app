@@ -14,5 +14,5 @@ ReactDOM.render(
     <React.StrictMode>
         <App />
     </React.StrictMode>,
-    document.querySelector('#root')
+    document.querySelector('#root')    //index.html에서 가져온 root
 );
