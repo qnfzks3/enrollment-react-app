@@ -29,3 +29,10 @@
     font-size: 30px;
     font-style: italic;
 }
+
+.appDropDowns {
+    color: black;
+    font-family: inherit;
+    font-size: inherit;
+    margin-left: 10px;
+}
