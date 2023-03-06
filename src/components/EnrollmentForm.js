@@ -30,9 +30,14 @@ const EnrollmentForm = (props) => {
             //등록완료된 학생정보 키  생성
             const rndKey=Math.floor(1000+Math.random()*9000);
             //생성한 키와 등록 완료된 학생 정보를 props에 저장
-            let stud = {
+            let stud = { // 여기가 등록 버튼 누르면 아래 출력하게 하는곳
                 key: rndKey , fname:firstName,lname:lastName, program: props.chosenProgram ,email: email,
-                edit: <MdEdit className="actionIcon" />, delete: <MdDelete className="actionIcon" />
+                edit: <MdEdit className="actionIcon" />,
+
+                //삭제 아이콘 클릭 시 삭제 대상 학생정보의 키를 넘김
+                delete: <MdDelete className="actionIcon"
+                onClick={()=>props.handleItemSelection('delete',rndKey)} /> //key값과 종료  -< app.js에서 만들어준다.
+
             }
             props.setStudDetails(stud)
         }

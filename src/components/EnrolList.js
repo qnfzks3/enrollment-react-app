@@ -62,6 +62,15 @@ const EnrolList=(props)=>{
            items=[...items, props.studDetails];
            props.setStudDetails({});
        }
+       // 삭제 기능 수행
+      if (props.action === 'delete'){
+          //삭제 대상 아이템을 키로 가져옴    -- items 는 등록된 학생들의 정보
+          const deleteItem = items.filter(
+              (item)=>item.key === props.selectedItemKey
+          )[0];
+          //삭제대상 아이템만 제외하고 다시 items 객체 생성
+          items = items.filter((item)=>item !==deleteItem);
+      }
    },[props]);  // props 값이 생길때 마다  명령을 계속 한다.
 
   return(
