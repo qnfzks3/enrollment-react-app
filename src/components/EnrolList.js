@@ -70,6 +70,8 @@ const EnrolList=(props)=>{
           )[0];
           //삭제대상 아이템만 제외하고 다시 items 객체 생성
           items = items.filter((item)=>item !==deleteItem);
+          //삭제한 학생에 대한 수정시 참가가능 인원수 복구
+          props.restoreSeats(deleteItem.program);
       }
    },[props]);  // props 값이 생길때 마다  명령을 계속 한다.
 
