@@ -3,7 +3,17 @@ import '../EnrolList.css';
 import {DetailsList} from '@fluentui/react/lib/DetailsList';
 
 //과정 등록 학생 리스트 컬럼 정의(이름 , 성 , 과정 , 이매일 )
+
+
 const columns = [
+    {
+        key: 'edit',
+        name: '수정',
+        fieldName: "edit",
+        minWidth: 50,
+        isResizable: false
+    },
+    
     {
         key:'fname',name: 'First Name',
         fieldName:'fname',
@@ -23,6 +33,16 @@ const columns = [
         key:'email',name: '이매일',
         fieldName:'email',
         minWidth: 90, isResizable:false            //isResizable 을 true 로 바꾸면 너비를 마우스로 조절할수있다.
+
+
+    },
+    {
+        key: 'delete',
+        name: '삭제',
+        fieldName: "delete",
+        minWidth: 50,
+        isResizable: false
+
     },
 ];
 

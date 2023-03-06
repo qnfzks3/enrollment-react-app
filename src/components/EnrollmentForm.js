@@ -1,5 +1,6 @@
 import { React, useState } from 'react';
 import '../App.css';
+import {MdEdit,MdDelete} from 'react-icons/md'  //아이콘 가져오기
 
 const EnrollmentForm = (props) => {
     // 폼에 입력한 이름/성/이메일을 기억하기 하기 위해 state형 변수 선언
@@ -30,7 +31,8 @@ const EnrollmentForm = (props) => {
             const rndKey=Math.floor(1000+Math.random()*9000);
             //생성한 키와 등록 완료된 학생 정보를 props에 저장
             let stud = {
-                key: rndKey , fname:firstName,lname:lastName, program: props.chosenProgram ,email: email
+                key: rndKey , fname:firstName,lname:lastName, program: props.chosenProgram ,email: email,
+                edit: <MdEdit className="actionIcon" />, delete: <MdDelete className="actionIcon" />
             }
             props.setStudDetails(stud)
         }
